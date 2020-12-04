@@ -1,5 +1,6 @@
 import React from 'react';
 
+// import logo
 import logo from '../twitter-logo.png';
 
 //import icons

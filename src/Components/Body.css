@@ -2,17 +2,66 @@
 	height: 100vh;
 	width: 90vw;
 	max-width: 598px;
-	border-left: 1px rgb(235, 238, 240) solid;
-	border-right: 1px rgb(235, 238, 240) solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
 .body-header {
 	display: flex;
 	flex-direction: row;
-	background: pink;
+	align-items: center;
+
 	height: 53px;
+	min-width: 598px;
 	padding-left: 15px;
 	padding-right: 15px;
 	position: fixed;
-	width: 100%;
+	border-bottom: 1px rgb(235, 238, 240) solid;
+	border-left: 1px rgb(235, 238, 240) solid;
+	border-right: 1px rgb(235, 238, 240) solid;
+	background: #ffffff;
+}
+
+.body-header:hover {
+	cursor: pointer;
+}
+
+.body-header-tab-name {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.body-header div span {
+	font-size: 1.2rem;
+	font-weight: 800;
+}
+
+.body-header-tab-icon {
+	height: 37px;
+	width: 37px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 999px;
+}
+
+.body-header-tab-icon:hover {
+	background: #e0f3ff;
+}
+
+.body-header div .sparkle {
+	height: 22.5px;
+	width: 22.5px;
+	color: #1da1f2;
+}
+
+.body-main {
+	margin-top: 53px;
+	border-left: 1px rgb(235, 238, 240) solid;
+	border-right: 1px rgb(235, 238, 240) solid;
 }
