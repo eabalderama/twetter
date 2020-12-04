@@ -1,0 +1,164 @@
+.sidebar-left {
+	height: 100vh;
+	display: flex;
+	width: 275px;
+	flex-flow: column nowrap;
+	align-items: flex-end;
+	justify-content: space-between;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.sidebar-left-container {
+	width: 255px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+}
+
+.sidebar-left-logo {
+	width: 30px;
+	height: 30px;
+	color: #1da1f2;
+}
+
+.sidebar-left-logo-container {
+	border-radius: 25px;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+}
+
+.sidebar-left-logo-container:hover {
+	background-color: #e0f3ff;
+	cursor: pointer;
+}
+
+.item-list {
+	list-style: none;
+	padding: 0;
+	margin-left: 5px;
+}
+
+.item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.item:hover .item-content {
+	cursor: pointer;
+	background: #e0f3ff;
+}
+
+.item-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 10px;
+	border-radius: 30px;
+}
+
+.item-content a {
+	text-decoration: none;
+	margin-left: 15px;
+	margin-right: 15px;
+	font-weight: bold;
+	font-size: 1.3rem;
+	color: #0f1419;
+}
+
+.list-icon {
+	color: #0f1419;
+	width: 30px;
+	height: 30px;
+}
+
+.active .list-icon,
+.active a {
+	color: #1da1f2;
+}
+
+.tweet-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tweet-btn button {
+	width: 100%;
+	margin: 10px;
+	background: #1da1f2;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 1rem;
+	color: #ffffff;
+	border-radius: 50px;
+}
+
+.tweet-btn button:hover {
+	cursor: pointer;
+}
+
+.user-profile-btn {
+	height: 59px;
+	width: 255px;
+	border-radius: 50px;
+	padding: 10px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.user-profile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50px;
+	border-color: rgba(0, 0, 0, 0.4);
+	border-style: solid;
+	border-width: 1px;
+}
+
+.user-profile-btn:hover {
+	background: #e0f3ff;
+	cursor: pointer;
+}
+
+.user-profile img {
+	height: 39px;
+	width: 39px;
+}
+
+.user-name {
+	flex: 1;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.user-name span {
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.user-name p {
+	font-size: 15px;
+	color: rgb(91, 112, 131);
+}
+
+.user-more {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.user-more-icon {
+	width: 20px;
+	height: 20px;
+}

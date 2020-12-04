@@ -1,5 +1,14 @@
-import logo from './logo.svg';
-import {useState, useEffect} from 'react';
+import React,{useState, useEffect} from 'react';
+
+// // Import react Bootstrap
+// import { Nav } from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Import components
+import SideBarLeft from './Components/SideBarLeft.js';
+import SideBarRight from './Components/SideBarRight.js';
+import Body from './Components/Body.js';
+
 import './App.css';
 const axios = require('axios');
 
@@ -33,11 +42,24 @@ function App() {
 
   console.log(quote);
   return (
-    <div className="App">
-     <img src={meow} alt=""/>
-     <h6>{quote.author}</h6>
-    <p>{quote.quoteText}</p>
+    // <div className="App">
+    //  <img src={meow} alt=""/>
+    //  <h6>{quote.author}</h6>
+    // <p>{quote.quoteText}</p>
+    // </div>
+    <div className='container'>
+        <div className='container-one'>
+          <SideBarLeft />
+        </div>
+        <div className='container-two'>
+          <div className='main'>
+            <Body />
+            <SideBarRight />
+          </div>
+        </div>
+        
     </div>
+   
   );
 }
 
