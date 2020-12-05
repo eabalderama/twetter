@@ -1,9 +1,5 @@
 import React,{useState, useEffect} from 'react';
 
-// // Import react Bootstrap
-// import { Nav } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
 // Import components
 import SideBarLeft from './Components/SideBarLeft.js';
 import SideBarRight from './Components/SideBarRight.js';
@@ -29,7 +25,8 @@ function App() {
   async function getQuote() {
     try {
       const response = await axios.get('https://quote-garden.herokuapp.com/api/v2/quotes/random');
-      setQuote(...quote, {quoteText: response.data.quote['quoteText'], author: response.data.quote['quoteAuthor']});
+      const username = response.data.quote['quoteAuthor'].replace(/ /g, '');
+      setQuote(...quote, {quoteText: response.data.quote['quoteText'], author: response.data.quote['quoteAuthor'], username: username});
     } catch (error) {
       console.error(error);
     }
@@ -40,7 +37,6 @@ function App() {
     getQuote();
   }, []);
 
-  console.log(quote);
   return (
     // <div className="App">
     //  <img src={meow} alt=""/>
@@ -53,7 +49,7 @@ function App() {
         </div>
         <div className='container-two'>
           <div className='main'>
-            <Body />
+            <Body quote={quote} image={meow} />
             <SideBarRight />
           </div>
         </div>

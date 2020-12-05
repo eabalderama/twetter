@@ -18,8 +18,6 @@
 	padding-right: 15px;
 	position: fixed;
 	border-bottom: 1px rgb(235, 238, 240) solid;
-	border-left: 1px rgb(235, 238, 240) solid;
-	border-right: 1px rgb(235, 238, 240) solid;
 	background: #ffffff;
 }
 
@@ -60,8 +58,9 @@
 	color: #1da1f2;
 }
 
-.body-main {
-	margin-top: 53px;
-	border-left: 1px rgb(235, 238, 240) solid;
-	border-right: 1px rgb(235, 238, 240) solid;
+.body-spacer {
+	height: 10px;
+	border-bottom: 1px rgb(235, 238, 240) solid;
+	border-top: 1px rgb(235, 238, 240) solid;
+	background: #f7f9fa;
 }

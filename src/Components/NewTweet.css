@@ -1,9 +1,7 @@
 .write-post {
 	margin-top: 53px;
 	padding: 5px 15px;
-	border-bottom: 1px rgb(235, 238, 240) solid;
-	border-left: 1px rgb(235, 238, 240) solid;
-	border-right: 1px rgb(235, 238, 240) solid;
+	background: #ffffff;
 
 	display: flex;
 	flex-direction: row;
@@ -48,7 +46,7 @@
 	align-items: center;
 	color: #1da1f2;
 	padding-bottom: 10px;
-	border-bottom: 1px rgb(235, 238, 240) solid;
+	border-bottom: 1px #ebeef0 solid;
 }
 
 .write-post-privacy div {

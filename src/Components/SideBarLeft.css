@@ -7,6 +7,7 @@
 	justify-content: space-between;
 	padding-left: 10px;
 	padding-right: 10px;
+	border-right: 1px rgb(235, 238, 240) solid;
 }
 
 .sidebar-left-container {

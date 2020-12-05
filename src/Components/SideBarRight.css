@@ -1,5 +1,6 @@
 .sidebar-right {
-	background-color: green;
+	/* background-color: green; */
 	height: 100vh;
 	min-width: 350px;
+	border-left: 1px rgb(235, 238, 240) solid;
 }

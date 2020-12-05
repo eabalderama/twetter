@@ -1,0 +1,182 @@
+.body-tweet-container {
+	padding: 10px 15px;
+
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px rgb(235, 238, 240) solid;
+}
+
+.body-tweet-container:hover {
+	cursor: pointer;
+	background: #f7f9fa;
+}
+
+.user-tweet-icon {
+	margin-right: 10px;
+}
+
+.user-tweet-icon div {
+	background: #ffffff;
+	border-radius: 999px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.user-tweet-icon div img {
+	height: 49px;
+	width: 49px;
+
+	border-radius: 999px;
+}
+
+.user-tweet-identity {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.user-tweet-name {
+	font-size: 0.95rem;
+	font-weight: 700;
+	margin-right: 5px;
+	color: #0f1419;
+}
+
+.user-tweet-identity div:hover .user-tweet-name {
+	text-decoration: underline;
+}
+
+.user-tweet-username {
+	font-size: 0.95rem;
+	color: #5b7083;
+}
+
+.user-tweet-more {
+	height: 34px;
+	width: 34px;
+	border-radius: 999px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.user-tweet-more:hover {
+	cursor: pointer;
+	background: #e0f3ff;
+}
+
+.user-tweet-more-icon {
+	height: 18.75px;
+	width: 18.75px;
+	color: rgb(91, 112, 131);
+}
+
+.user-tweet-more:hover .user-tweet-more-icon {
+	color: #1da1f2;
+}
+
+.user-tweet span {
+	font-size: 0.95rem;
+	color: #0f1419;
+}
+
+.user-tweet-buttons {
+	max-width: 425px;
+	width: 80%;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.user-tweet-buttons span {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex: 1;
+}
+
+.user-tweet-buttons span:last-child {
+	flex: 0;
+}
+
+.tweet-button-icon {
+	height: 18.75px;
+	width: 18.75px;
+	color: #5b7083;
+}
+
+.tweet-icon-counter {
+	font-size: 13px;
+	color: #5b7083;
+	padding: 0px 10px;
+}
+
+.user-tweet-buttons span div {
+	border-radius: 999px;
+	height: 34.75px;
+	min-width: 34.75px;
+	margin: -8px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.user-tweet-buttons .user-tweet-reply:hover div {
+	color: #1da1f2;
+	background: #e0f3ff;
+}
+
+.user-tweet-buttons .user-tweet-reply:hover div .tweet-button-icon {
+	color: #1da1f2;
+}
+
+.user-tweet-buttons .user-tweet-reply:hover span {
+	color: #1da1f2;
+	cursor: pointer;
+}
+
+.user-tweet-buttons .user-tweet-retweet:hover div {
+	background: rgba(23, 191, 99, 0.1);
+}
+
+.user-tweet-buttons .user-tweet-retweet:hover div .tweet-button-icon {
+	color: rgb(23, 191, 99);
+}
+
+.user-tweet-buttons .user-tweet-retweet:hover span {
+	color: rgb(23, 191, 99);
+	cursor: pointer;
+}
+
+.user-tweet-buttons .user-tweet-heart:hover div {
+	background: rgba(224, 36, 94, 0.1);
+}
+
+.user-tweet-buttons .user-tweet-heart:hover div .tweet-button-icon {
+	color: rgb(224, 36, 94);
+}
+
+.user-tweet-buttons .user-tweet-heart:hover span {
+	color: rgb(224, 36, 94);
+	cursor: pointer;
+}
+
+.user-tweet-buttons .user-tweet-up:hover div {
+	background: rgba(29, 161, 242, 0.1);
+}
+
+.user-tweet-buttons .user-tweet-up:hover div .tweet-button-icon {
+	color: rgb(29, 161, 242);
+}
+
+.user-tweet-buttons .user-tweet-up:hover span {
+	color: rgb(29, 161, 242);
+	cursor: pointer;
+}

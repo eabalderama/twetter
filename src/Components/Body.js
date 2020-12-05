@@ -2,16 +2,16 @@ import React from 'react';
 
 // import components
 import NewTweet from './NewTweet.js';
+import TweetPost from './TweetPost.js';
 
 // import icons
 import { HiOutlineSparkles } from 'react-icons/hi';
 
-
 // import css
 import './Body.css';
 
-const Body = () => {
-
+const Body = ({quote, image}) => {
+   
     return (
         <div className='body-container'>
             <div className='body-header'>
@@ -24,109 +24,10 @@ const Body = () => {
             </div>
             <NewTweet />
             
+            <div className='body-spacer'></div>
+
             <div className='body-main'>
-                <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <h1>hello</h1>
-            </div>
+                <TweetPost quote={quote} image={image}/>
             </div>
             
             
