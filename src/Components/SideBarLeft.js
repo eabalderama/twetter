@@ -1,8 +1,5 @@
 import React from 'react';
 
-// import logo
-import logo from '../twitter-logo.png';
-
 //import icons
 import { RiHome7Fill, RiFileList2Line } from 'react-icons/ri';
 import { FaTwitter } from 'react-icons/fa';
@@ -16,8 +13,7 @@ import { CgMoreO, CgMore } from 'react-icons/cg';
 import './SideBarLeft.css';
 
 
-const SideBar = () => {
-
+const SideBar = ({user}) => {
     return (
         <div className='sidebar-left'>
             <div className='sidebar-left-container'>
@@ -82,11 +78,11 @@ const SideBar = () => {
             </div>
             <div className='user-profile-btn'>
                 <div className='user-profile'>
-                    <img src={logo} alt="twitter logo"/>
+                    <img src={user['image']} alt={user['name']} />
                 </div>
                 <div className='user-name'>
-                    <span>User Name Here</span>
-                    <p>@userNameHere</p>
+                    <span>{user['name']}</span>
+                    <p>@{user['username']}</p>
                 </div>
                 <div className='user-more'>
                     <CgMore className='user-more-icon' />

@@ -9,19 +9,20 @@ import { RiHeart3Line } from 'react-icons/ri';
 // import css
 import './TweetPost.css';
 
-const TweetPost = ({quote, image}) => {
+const TweetPost = ({quote, author, username, image}) => {
+
 
     return (<div className='body-tweet-container'>
     <div className='user-tweet-icon'>
         <div>
-            <img src={image} alt={quote['author']}/>
+            <img src={image} alt={author}/>
         </div>
     </div>
     <div className='user-tweet-contents'>
         <div className='user-tweet-identity'>
-            <div>
-                <span className='user-tweet-name'>{quote['author']}</span>
-                <span className='user-tweet-username'>@{quote['username']}</span>
+            <div className='user-tweet-name-username'>
+                <span className='user-tweet-name'>{author}</span>
+                <span className='user-tweet-username'>@{username}</span>
             </div>
             <div className='user-tweet-more'>
                 <CgMore className='user-tweet-more-icon' />
@@ -29,7 +30,7 @@ const TweetPost = ({quote, image}) => {
         </div>
         <div className='user-tweet-text'>
             <div className='user-tweet'>
-                    <span>{quote['quoteText']}</span>
+                    <span>{quote}</span>
             </div>
             <div className='user-tweet-buttons'>
                 <span className='user-tweet-reply'>

@@ -30,6 +30,10 @@
 	border-radius: 999px;
 }
 
+.user-tweet-contents {
+	flex: 1;
+}
+
 .user-tweet-identity {
 	flex: 1;
 	display: flex;
@@ -45,7 +49,7 @@
 	color: #0f1419;
 }
 
-.user-tweet-identity div:hover .user-tweet-name {
+.user-tweet-identity .user-tweet-name-username:hover .user-tweet-name {
 	text-decoration: underline;
 }
 

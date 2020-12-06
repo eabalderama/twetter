@@ -64,3 +64,27 @@
 	border-top: 1px rgb(235, 238, 240) solid;
 	background: #f7f9fa;
 }
+
+.load-more-tweet {
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+
+	background: #e0f3ff;
+}
+
+.load-more-tweet span {
+	font-size: 15px;
+	color: #5b7083;
+}
+
+.load-more-tweet:hover {
+	cursor: pointer;
+}
+
+.load-more-tweet:hover span {
+	color: #1da1f2;
+}

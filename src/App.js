@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 
 // Import components
 import SideBarLeft from './Components/SideBarLeft.js';
@@ -10,46 +10,66 @@ const axios = require('axios');
 
 function App() {
 
-  const [meow, setMeow] = useState('');
-  const [quote, setQuote] = useState([]);
+  const [doge, setDoge] = useState([]);
+  const [quotes, setQuote] = useState([]);
+  const [posts, setPosts] = useState([]);
+  const [page, setPage] = useState(1);
+  const [user, setUser] = useState({});
+  const [isUser, setIsUser] = useState(true)
 
-  async function getMeow() {
-    try {
-      const response = await axios.get('https://aws.random.cat/meow');
-      setMeow(response.data['file']);
-    } catch (error) {
-      console.error(error);
-    }
+  // const getQuote = async () => {
+  //   const imageResponse =  await axios.get('https://dog.ceo/api/breeds/image/random/10');
+  //   setDoge(imageResponse.data.message);
+   
+  //   const quoteResponse = await axios.get(`https://quote-garden.herokuapp.com/api/v2/quotes?page=${page}&limit=10`);
+  //   setQuote(quoteResponse.data.quotes);
+  // };
+
+  const setPost = () => {
+      setPosts([...posts, ...quotes.map((quote, index) => {
+      const username = quote['quoteAuthor'].replace(/ /g, '');
+      if(index === 0 && isUser){
+        setIsUser(false);
+        setUser({name: quote['quoteAuthor'], username: username, image: doge[index]});
+      }
+      return (
+        {key: quote['_id'],
+        quoteText: quote['quoteText'],
+        author: quote['quoteAuthor'],
+        username: username,
+        image: doge[index]}
+      );  
+    })]
+    );
+
   }
 
-  async function getQuote() {
-    try {
-      const response = await axios.get('https://quote-garden.herokuapp.com/api/v2/quotes/random');
-      const username = response.data.quote['quoteAuthor'].replace(/ /g, '');
-      setQuote(...quote, {quoteText: response.data.quote['quoteText'], author: response.data.quote['quoteAuthor'], username: username});
-    } catch (error) {
-      console.error(error);
-    }
-  }
+   useEffect(() => {
 
-  useEffect(() => {
-    getMeow();
-    getQuote();
-  }, []);
+    axios.get('https://dog.ceo/api/breeds/image/random/10').then((imageResponse) => {
+      setDoge(imageResponse.data.message);
+    });
 
+    axios.get(`https://quote-garden.herokuapp.com/api/v2/quotes?page=${page}&limit=10`).then((quoteResponse) => {
+      setQuote(quoteResponse.data.quotes);
+    });
+    
+      // getQuote();
+   }, [page]);
+
+
+   useEffect(() => {
+    setPost();
+  }, [quotes] );  
   return (
-    // <div className="App">
-    //  <img src={meow} alt=""/>
-    //  <h6>{quote.author}</h6>
-    // <p>{quote.quoteText}</p>
-    // </div>
+   
     <div className='container'>
         <div className='container-one'>
-          <SideBarLeft />
+          <SideBarLeft user={user} />
         </div>
         <div className='container-two'>
           <div className='main'>
-            <Body quote={quote} image={meow} />
+            <Body posts={posts} setPage={setPage} page={page} />
             <SideBarRight />
           </div>
         </div>
