@@ -17,14 +17,6 @@ function App() {
   const [user, setUser] = useState({});
   const [isUser, setIsUser] = useState(true)
 
-  // const getQuote = async () => {
-  //   const imageResponse =  await axios.get('https://dog.ceo/api/breeds/image/random/10');
-  //   setDoge(imageResponse.data.message);
-   
-  //   const quoteResponse = await axios.get(`https://quote-garden.herokuapp.com/api/v2/quotes?page=${page}&limit=10`);
-  //   setQuote(quoteResponse.data.quotes);
-  // };
-
   const setPost = () => {
       setPosts([...posts, ...quotes.map((quote, index) => {
       const username = quote['quoteAuthor'].replace(/ /g, '');
@@ -50,8 +42,9 @@ function App() {
       setDoge(imageResponse.data.message);
     });
 
-    axios.get(`https://quote-garden.herokuapp.com/api/v2/quotes?page=${page}&limit=10`).then((quoteResponse) => {
-      setQuote(quoteResponse.data.quotes);
+    axios.get(`https://quote-garden.herokuapp.com/api/v3/quotes?page=${page}&limit=10`).then((quoteResponse) => {
+      console.log(quoteResponse.data.data);
+      setQuote(quoteResponse.data.data);
     });
     
       // getQuote();
