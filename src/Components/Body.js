@@ -11,7 +11,6 @@ import { HiOutlineSparkles } from 'react-icons/hi';
 import './Body.css';
 
 const Body = ({posts, setPage, page}) => {
-    console.log(...posts);
     const loadMoreTweet = () => {
         setPage(page+10);
     }

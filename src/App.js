@@ -43,7 +43,6 @@ function App() {
     });
 
     axios.get(`https://quote-garden.herokuapp.com/api/v3/quotes?page=${page}&limit=10`).then((quoteResponse) => {
-      console.log(quoteResponse.data.data);
       setQuote(quoteResponse.data.data);
     });
     
